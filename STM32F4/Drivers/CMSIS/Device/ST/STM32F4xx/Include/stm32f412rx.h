@@ -14466,10 +14466,10 @@ typedef struct
 /*  product lines within the same STM32F4 Family                              */
 /******************************************************************************/
 /* Aliases for __IRQn */
-#define FMC_IRQn              FSMC_IRQn
+// #define FMC_IRQn              FSMC_IRQn
 
 /* Aliases for __IRQHandler */
-#define FMC_IRQHandler        FSMC_IRQHandler
+// #define FMC_IRQHandler        FSMC_IRQHandler
 
 /**
   * @}
