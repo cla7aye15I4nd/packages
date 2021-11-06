@@ -9189,7 +9189,7 @@ typedef struct
 #define PWR_CSR_BRR_Msk        (0x1UL << PWR_CSR_BRR_Pos)                       /*!< 0x00000008 */
 #define PWR_CSR_BRR            PWR_CSR_BRR_Msk                                 /*!< Backup regulator ready                           */
 #define PWR_CSR_EWUP3_Pos      (6U)                                            
-#define PWR_CSR_EWUP3_Msk      (0x1UL << PWR_CSR_EWUP1_Pos)                     /*!< 0x00000040 */
+#define PWR_CSR_EWUP3_Msk      (0x1UL << PWR_CSR_EWUP3_Pos)                     /*!< 0x00000040 */
 #define PWR_CSR_EWUP3          PWR_CSR_EWUP3_Msk                               /*!< Enable WKUP pin 3                                */
 #define PWR_CSR_EWUP2_Pos      (7U)                                            
 #define PWR_CSR_EWUP2_Msk      (0x1UL << PWR_CSR_EWUP2_Pos)                     /*!< 0x00000080 */
