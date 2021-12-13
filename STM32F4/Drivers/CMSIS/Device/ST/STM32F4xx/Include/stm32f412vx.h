@@ -915,8 +915,6 @@ typedef struct
 #define GPIOC_BASE            (AHB1PERIPH_BASE + 0x0800UL)
 #define GPIOD_BASE            (AHB1PERIPH_BASE + 0x0C00UL)
 #define GPIOE_BASE            (AHB1PERIPH_BASE + 0x1000UL)
-#define GPIOF_BASE            (AHB1PERIPH_BASE + 0x1400UL)
-#define GPIOG_BASE            (AHB1PERIPH_BASE + 0x1800UL)
 #define GPIOH_BASE            (AHB1PERIPH_BASE + 0x1C00UL)
 #define CRC_BASE              (AHB1PERIPH_BASE + 0x3000UL)
 #define RCC_BASE              (AHB1PERIPH_BASE + 0x3800UL)
@@ -1065,7 +1063,15 @@ typedef struct
 /** @addtogroup Exported_constants
   * @{
   */
-  
+
+/** @addtogroup Hardware_Constant_Definition
+  * @{
+  */
+#define LSI_STARTUP_TIME                40U /*!< LSI Maximum startup time in us */
+/**
+  * @}
+  */
+
   /** @addtogroup Peripheral_Registers_Bits_Definition
   * @{
   */
@@ -6582,6 +6588,9 @@ typedef struct
 #define FLASH_CR_EOPIE_Pos             (24U)                                   
 #define FLASH_CR_EOPIE_Msk             (0x1UL << FLASH_CR_EOPIE_Pos)            /*!< 0x01000000 */
 #define FLASH_CR_EOPIE                 FLASH_CR_EOPIE_Msk                      
+#define FLASH_CR_ERRIE_Pos             (25U)
+#define FLASH_CR_ERRIE_Msk             (0x1UL << FLASH_CR_ERRIE_Pos)
+#define FLASH_CR_ERRIE                 FLASH_CR_ERRIE_Msk
 #define FLASH_CR_LOCK_Pos              (31U)                                   
 #define FLASH_CR_LOCK_Msk              (0x1UL << FLASH_CR_LOCK_Pos)             /*!< 0x80000000 */
 #define FLASH_CR_LOCK                  FLASH_CR_LOCK_Msk                       
@@ -8948,7 +8957,7 @@ typedef struct
 #define PWR_CSR_BRR_Msk        (0x1UL << PWR_CSR_BRR_Pos)                       /*!< 0x00000008 */
 #define PWR_CSR_BRR            PWR_CSR_BRR_Msk                                 /*!< Backup regulator ready                           */
 #define PWR_CSR_EWUP3_Pos      (6U)                                            
-#define PWR_CSR_EWUP3_Msk      (0x1UL << PWR_CSR_EWUP3_Pos)                     /*!< 0x00000040 */
+#define PWR_CSR_EWUP3_Msk      (0x1UL << PWR_CSR_EWUP1_Pos)                     /*!< 0x00000040 */
 #define PWR_CSR_EWUP3          PWR_CSR_EWUP3_Msk                               /*!< Enable WKUP pin 3                                */
 #define PWR_CSR_EWUP2_Pos      (7U)                                            
 #define PWR_CSR_EWUP2_Msk      (0x1UL << PWR_CSR_EWUP2_Pos)                     /*!< 0x00000080 */
@@ -14480,10 +14489,10 @@ typedef struct
 /*  product lines within the same STM32F4 Family                              */
 /******************************************************************************/
 /* Aliases for __IRQn */
-// #define FMC_IRQn              FSMC_IRQn
+#define FMC_IRQn              FSMC_IRQn
 
 /* Aliases for __IRQHandler */
-// #define FMC_IRQHandler        FSMC_IRQHandler
+#define FMC_IRQHandler        FSMC_IRQHandler
 
 /**
   * @}
